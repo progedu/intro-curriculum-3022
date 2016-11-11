@@ -14,6 +14,7 @@ html(lang="jp")
         button(type="submit") 投稿
     h2 投稿一覧
     each post in posts
-      p #{post.content}
-      p 投稿日時: #{post.createdAt}
+      p #{post.id}: #{post.content}
+      p 投稿日時: #{new Date(post.createdAt).toISOString()}
+      // toISOString => 2016-11-11T12:02:40.261Z
       hr
