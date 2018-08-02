@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "http-auth": "^2.2.8",
-    "jade": "^1.11.0",
+    "pug": "^2.0.0-rc.4",
     "pg": "^4.4.3",
     "pg-hstore": "^2.3.2",
     "sequelize": "^3.15.1"
