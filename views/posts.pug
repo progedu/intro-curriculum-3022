@@ -13,6 +13,8 @@ html(lang="ja")
       div
         button(type="submit") 投稿
     h2 投稿一覧
+    a(href="/posts/ASC") 投稿が新しい順<br>
+    a(href="/posts/DESC") 投稿が古い順
     each post in posts
       p #{post.content}
       p 投稿日時: #{post.createdAt}
