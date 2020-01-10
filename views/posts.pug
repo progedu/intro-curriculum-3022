@@ -16,6 +16,15 @@ html(lang="ja")
     a(href="/posts/ASC") 投稿が新しい順<br>
     a(href="/posts/DESC") 投稿が古い順
     each post in posts
-      p #{post.content}
+      p #{post.id} #{post.content}
       p 投稿日時: #{post.createdAt}
+      -var time = now - post.createdAt
+      if time  < 60000
+        p #{parseInt(time/1000)}秒前
+      else if time < 3600000
+         p #{parseInt(time/60000)}分前
+      else if time < 86400000
+        p #{parseInt(time / 3600000)} 時間前
+      else
+        p #{parseInt(time / 86400000)}日前
       hr
